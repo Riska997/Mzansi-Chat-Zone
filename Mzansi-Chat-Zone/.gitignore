@@ -1,0 +1,10 @@
+target/
+chat-data/
+*.log
+.env
+.env.*
+!.env.example
+.idea/
+*.iml
+nbproject/private/
+.DS_Store
