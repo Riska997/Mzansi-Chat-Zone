@@ -10,4 +10,4 @@ RUN mvn -B -q -DskipTests package
 FROM payara/micro:6.2025.11-jdk17
 COPY --from=build /app/target/chat.war /opt/payara/deployments/chat.war
 EXPOSE 8080
-CMD ["--deploymentDir", "/opt/payara/deployments", "--contextroot", "ROOT", "--noCluster"]
+CMD ["--deploy", "/opt/payara/deployments/chat.war", "--contextroot", "ROOT", "--noHazelcast"]
