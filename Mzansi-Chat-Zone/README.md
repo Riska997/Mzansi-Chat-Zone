@@ -1,4 +1,4 @@
-# Mzansi Chat Zone — repaired Java chat application
+# Mzansi Chat Zone 
 
 A working, responsive group-chat web application based on the original **ChatApplication** Java/Jakarta EE project. The original app name, page flow and Java WebSocket/Servlet architecture are preserved. The redesigned screens use **espresso, terracotta, olive and warm cream**—no blue/purple dashboard theme.
 
