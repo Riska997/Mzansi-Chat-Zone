@@ -34,6 +34,15 @@ public final class DBManager {
             catch (Exception ex) { throw new SQLException("Unable to create local chat-data directory", ex); }
             url = DEFAULT_URL;
         }
+if (url.startsWith("jdbc:postgresql:")) {
+    try {
+        Class.forName("org.postgresql.Driver");
+    } catch (ClassNotFoundException ex) {
+        throw new SQLException(
+            "PostgreSQL JDBC driver could not be loaded", ex
+        );
+    }
+}
         String user = System.getenv("DB_USER");
         String pass = System.getenv("DB_PASSWORD");
         return DriverManager.getConnection(url, user == null ? "sa" : user, pass == null ? "" : pass);
